@@ -1,5 +1,5 @@
 $(document).ready( function () {
-	$.getJSON("/services/contents/json.php?wrapjson=true&url=https://data.miningpoolstats.stream/data/zclassic.js?t="+new Date().getTime()+"&callback=?", function(data) {
+	$.getJSON("//zclassic.mindland.it/services/contents/json.php?wrapjson=true&url=https://data.miningpoolstats.stream/data/zclassic.js?t="+new Date().getTime()+"&callback=?", function(data) {
 		if (data) {
 			$(".algo").html(data.algo);
 			$(".height").html(data.height);

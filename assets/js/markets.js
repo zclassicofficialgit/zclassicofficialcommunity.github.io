@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$.getJSON("/services/contents/json.php?url=https://coinmarketcap.com/currencies/zclassic/&callback=?", function(data) {
+	$.getJSON("//zclassic.mindland.it/services/contents/json.php?url=https://coinmarketcap.com/currencies/zclassic/&callback=?", function(data) {
 		if (data) {
 
 			var marketHtmlIdx = data.content.indexOf('<table id="markets-table"');

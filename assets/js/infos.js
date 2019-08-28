@@ -1,5 +1,5 @@
 $(document).ready( function () {
-	$.getJSON("/services/contents/json.php?wrapjson=true&url=https://widgets.coinmarketcap.com/v1/ticker/zclassic/&callback=?", function(dataArr) {
+	$.getJSON("//zclassic.mindland.it/services/contents/json.php?wrapjson=true&url=https://widgets.coinmarketcap.com/v1/ticker/zclassic/&callback=?", function(dataArr) {
 		if (dataArr && dataArr.length > 0) {
 			var data = dataArr[0];
 			$(".rank").html(data.rank);
@@ -18,13 +18,13 @@ $(document).ready( function () {
 			// crowdfounding
 			var btcCrowdAddress = '19CYTo2oXXPFCRmWWpn4FEFBZXFwgTZK8T';
 			var zclCrowdAddress = 't1Wx6YG4db5RdQxpBFj1CMZrshQ2wQPEgDE';
-			$.getJSON("http://zclassic.mindland.it/services/contents/json.php?url=https://blockchain.info/address/19CYTo2oXXPFCRmWWpn4FEFBZXFwgTZK8T?format=json&wrapjson=true&callback=?", function(databtc) {
+			$.getJSON("//zclassic.mindland.it/services/contents/json.php?url=https://blockchain.info/address/19CYTo2oXXPFCRmWWpn4FEFBZXFwgTZK8T?format=json&wrapjson=true&callback=?", function(databtc) {
 					if (databtc) {
 						var btc = 0;			
 						console.log(databtc.final_balance/100000000);
 						btc += databtc.final_balance/100000000;
 						
-						$.getJSON("http://zclassic.mindland.it/services/contents/json.php?url=https://explorer.zcl.zeltrez.io/api/addr/t1Wx6YG4db5RdQxpBFj1CMZrshQ2wQPEgDE/?noTxList=1&wrapjson=true&callback=?", function(datazcl) {
+						$.getJSON("//zclassic.mindland.it/services/contents/json.php?url=https://explorer.zcl.zeltrez.io/api/addr/t1Wx6YG4db5RdQxpBFj1CMZrshQ2wQPEgDE/?noTxList=1&wrapjson=true&callback=?", function(datazcl) {
 								if (datazcl) {
 									var zcl = 0;
 									console.log(datazcl.balance);

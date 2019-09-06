@@ -5475,11 +5475,11 @@ body {top: 0px!important;}
 }
 
 
-/* 20 - Secotion
+/* 20 - Sections
 --------------------------------------------------------------------------------------*/
 
 div#exchanges img {
-	height: 60px; 
+	height: 70px; 
 	padding: 10px;
 }
 
@@ -5489,6 +5489,11 @@ div#wallets img {
 }
 
 div#signals img {
+	height: 100px; 
+	padding: 10px;
+}
+
+div#supporters img {
 	height: 100px; 
 	padding: 10px;
 }

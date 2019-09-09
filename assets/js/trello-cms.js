@@ -41,6 +41,13 @@ $(document).ready( function () {
 			$('#signals').append('<a href="'+(signals[i].linkUrl?signals[i].linkUrl:'#')+'" target="_blank"><img src="'+signals[i].imageUrl+'" alt="'+signals[i].name+'"/></a>');
 		}
 
+		// supporters
+		var supporters = contentTree['supporters'].elements;
+		for (var i = 0; i < supporters.length; i++) {
+			$('#supporters').append('<a href="'+(supporters[i].linkUrl?supporters[i].linkUrl:'#')+'" target="_blank"><img src="'+supporters[i].imageUrl+'" alt="'+supporters[i].name+'"/></a>');
+			$('.'+supporters[i].name.toLowerCase()).show();
+		}
+
 		// contents
 		var contents = contentTree['contents'].elements;
 		for (var i = 0; i < contents.length; i++) {

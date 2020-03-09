@@ -1,5 +1,6 @@
 $(document).ready( function () {
-	$.getJSON("//zclassic.mindland.it/services/contents/json.php?wrapjson=true&url=https://data.miningpoolstats.stream/data/zclassic.js?t="+new Date().getTime()+"&callback=?", function(data) {
+   $.get("//zclassic.mindland.it/services/contents/json.php?wrapjson=false&url=https://miningpoolstats.stream/data/time?t="+new Date().getTime(), function(time) {
+	$.getJSON("//zclassic.mindland.it/services/contents/json.php?wrapjson=true&url=https://data.miningpoolstats.stream/data/zclassic.js?t="+time+"&callback=?", function(data) {
 		if (data) {
 			$(".algo").html(data.algo);
 			$(".height").html(data.height);
@@ -28,4 +29,5 @@ $(document).ready( function () {
 			$("#poolstable").DataTable({responsive: true, paging: false, searching: false, info: false, ordering: false});	
 		}
 	});
+   });
 });

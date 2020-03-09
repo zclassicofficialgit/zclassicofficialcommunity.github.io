@@ -1,5 +1,6 @@
 <?php
 	header("Content-type:text/javascript");
+	header("Access-Control-Allow-Origin: *");
 	$p_url = isset($_POST['url'])? $_POST['url'] : $_GET['url'];
 	$p_callback = isset($_POST['callback'])? $_POST['callback'] : $_GET['callback'];
 	$p_wrapjson = isset($_POST['wrapjson'])? $_POST['wrapjson'] : $_GET['wrapjson'];

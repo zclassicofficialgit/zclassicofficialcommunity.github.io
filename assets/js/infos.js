@@ -24,7 +24,7 @@ $(document).ready( function () {
 						console.log(databtc.final_balance/100000000);
 						btc += databtc.final_balance/100000000;
 						
-						$.getJSON("//zclassic.mindland.it/services/contents/json.php?url=https://explorer.zcl.zeltrez.io/api/addr/t1Wx6YG4db5RdQxpBFj1CMZrshQ2wQPEgDE/?noTxList=1&wrapjson=true&callback=?", function(datazcl) {
+						$.getJSON("//zclassic.mindland.it/services/contents/json.php?url=https://explorer.zcl.zelcore.io/api/addr/t1Wx6YG4db5RdQxpBFj1CMZrshQ2wQPEgDE/?noTxList=1&wrapjson=true&callback=?", function(datazcl) {
 								if (datazcl) {
 									var zcl = 0;
 									console.log(datazcl.balance);
@@ -34,7 +34,7 @@ $(document).ready( function () {
 									zcl  = btc / data.price_btc;									
 
 									$(".crowdfounding-addr-btc").html('<a href="https://www.blockchain.com/btc/address/'+btcCrowdAddress+'" target="_blank">'+btcCrowdAddress+'</a>');
-									$(".crowdfounding-addr-zcl").html('<a href="https://explorer.zcl.zeltrez.io/address/'+zclCrowdAddress+'" target="_blank">'+zclCrowdAddress+'</a>');									$(".crowdfounding-btc").html(btc.toFixed(4));
+									$(".crowdfounding-addr-zcl").html('<a href="https://explorer.zcl.zelcore.io/address/'+zclCrowdAddress+'" target="_blank">'+zclCrowdAddress+'</a>');									$(".crowdfounding-btc").html(btc.toFixed(4));
 									$(".crowdfounding-zcl").html(zcl.toFixed(4));										
 								}
 						});

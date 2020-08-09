@@ -11,7 +11,7 @@ $(document).ready(function() {
 			$("#marketstable").DataTable({responsive: true, paging: false, searching: false, info: false, ordering: false});	
 
 
-			var summaryHtmlIdx = data.content.indexOf('<table class="table cmc-table-striped cmc-cc-summary-table"');
+			var summaryHtmlIdx = data.content.indexOf('<div class="cmc-table__table-wrapper-outer"><div><table>');
 			var summaryHtml = data.content.substring(summaryHtmlIdx ,data.content.indexOf('</table>',summaryHtmlIdx) + 8);
 			$(".summary").show();
 			$("#summarytable").html(summaryHtml);

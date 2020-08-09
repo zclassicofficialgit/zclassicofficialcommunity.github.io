@@ -19,5 +19,6 @@ $(document).ready(function() {
 		}
 	});
     **/
+    $(".markets").show();
     $(".summary").show();
 });

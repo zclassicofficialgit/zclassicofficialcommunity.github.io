@@ -1,5 +1,5 @@
 $(document).ready(function() {
-/**
+    /**
 	$.getJSON("/services/contents/json.php?url=https://coinmarketcap.com/currencies/zclassic/&callback=?", function(data) {
 		if (data) {  		   
 			var marketHtmlIdx = data.content.indexOf('<div class="cmc-table__table-wrapper-outer"><div><table>');
@@ -18,5 +18,6 @@ $(document).ready(function() {
 			$("#summarytable").DataTable({responsive: true, paging: false, searching: false, info: false, ordering: false});	
 		}
 	});
-**/
+    **/
+    $(".summary").show();
 });
